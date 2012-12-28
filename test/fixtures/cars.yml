@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  brand: MyString
+  model: MyString
+  year: 2012-12-28
+  engine: 1
+  price: 1
+  notes: MyText
+  image: 
+  owner: MyText
+
+two:
+  brand: MyString
+  model: MyString
+  year: 2012-12-28
+  engine: 1
+  price: 1
+  notes: MyText
+  image: 
+  owner: MyText
