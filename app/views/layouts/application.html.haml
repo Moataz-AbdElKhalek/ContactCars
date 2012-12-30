@@ -47,7 +47,7 @@
                   = form_tag cars_path, :method => :get do
                     = label :car, :title, 'Brand'
                     = select :car, :Brand, ['Merceds','BMW','Fiat','Ferrary','Toyota']
-                    = hidden_field 'status', 'new'
+                    = hidden_field_tag 'status', 'new'
                     = submit_tag 'Search'
                 %li
                   %br
@@ -55,7 +55,7 @@
                   = form_tag cars_path, :method => :get do
                     = label :car, :title, 'Brand'
                     = select :car, :Brand, ['Merceds','BMW','Fiat','Ferrary','Toyota']
-                    = hidden_field 'status', 'old'
+                    = hidden_field_tag 'status', 'old'
                     = submit_tag 'Search'
                   
      

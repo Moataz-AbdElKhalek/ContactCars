@@ -3,9 +3,11 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
-    brand = params['Brand']
-
-
+	if params['commit'] == 'Search'
+		@brand = params['car']['Brand']
+		@status = params['status']
+		@cars = Car.where(:Brand=> @brand, :status => @status)
+	end
 
     respond_to do |format|
       format.html # index.html.erb

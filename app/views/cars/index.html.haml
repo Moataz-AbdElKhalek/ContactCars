@@ -8,7 +8,7 @@
     %th Year
     %th Engine
     %th Price
-    %th Image
+    %th Status
     %th Owner
 
   - @cars.each do |car|
@@ -18,7 +18,7 @@
       %td= car.Year
       %td= car.Engine
       %td= car.Price
-      %td= car.Image
+      %td= car.status
       %td= car.Owner
       %td= link_to 'Show', car
       %td= link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete
