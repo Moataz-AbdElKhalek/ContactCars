@@ -1,0 +1,69 @@
+!!! 5
+%html
+  %head
+    %title Contact Cars
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    
+  %body
+    %div#menu-wrapper
+      %div#menu
+        %ul
+          %li
+            = link_to 'Home'
+          %li
+            = link_to 'Cars'
+          %li
+            = link_to 'About'
+            
+    %div#wrapper
+      %div#header-wrapper
+        %div#header
+          %div#logo		
+            %h1 Contact Cars
+          %div{:style => "clear: both;"}
+
+	
+      %div#page
+        %div#page-bgtop
+          #main
+            - if flash[:notice]
+              #notice.message= flash[:notice]
+            - elsif flash[:warning]
+              #warning.message= flash[:warning]
+
+          %div#page-bgbtm
+            %div#content
+              %div.post
+                = yield
+      
+            %div#sidebar
+              %ul
+                %li
+                  %h2.title Search
+                %li
+                  %h3 New Car
+                  = form_tag cars_path, :method => :get do
+                    = label :car, :title, 'Brand'
+                    = select :car, :Brand, ['Merceds','BMW','Fiat','Ferrary','Toyota']
+                    = hidden_field 'status', 'new'
+                    = submit_tag 'Search'
+                %li
+                  %br
+                  %h3 Old Car
+                  = form_tag cars_path, :method => :get do
+                    = label :car, :title, 'Brand'
+                    = select :car, :Brand, ['Merceds','BMW','Fiat','Ferrary','Toyota']
+                    = hidden_field 'status', 'old'
+                    = submit_tag 'Search'
+                  
+     
+        %div{:style => "clear: both;"}
+          %br
+          %br
+          %br
+          
+      %div#footer
+        %p Copyright (c) 2012 ContactCars, All rights reserved to Yahia Kandeel & Moataz Abdelkhalek. 
+  

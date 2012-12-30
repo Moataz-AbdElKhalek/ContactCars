@@ -3,6 +3,9 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
+    brand = params['Brand']
+
+
 
     respond_to do |format|
       format.html # index.html.erb

@@ -7,8 +7,11 @@
           %li= msg
 
   .field
+    = f.label :Status
+    = f.select :Brand, ['Old', 'New']
+  .field
     = f.label :Brand
-    = f.text_field :Brand
+    = f.select :Brand, ['Merceds','BMW','Fiat','Ferrary','Toyota']
   .field
     = f.label :Model
     = f.text_field :Model

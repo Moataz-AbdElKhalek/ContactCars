@@ -11,19 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121228183801) do
+ActiveRecord::Schema.define(:version => 20121230171935) do
 
   create_table "cars", :force => true do |t|
-    t.string   "brand"
-    t.string   "model"
-    t.date     "year"
-    t.integer  "engine"
-    t.integer  "price"
-    t.text     "notes"
-    t.binary   "image"
-    t.text     "owner"
+    t.string   "Brand"
+    t.string   "Model"
+    t.date     "Year"
+    t.string   "Engine"
+    t.integer  "Price"
+    t.text     "Notes"
+    t.string   "Image"
+    t.string   "Owner"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",     :limit => nil
   end
 
 end

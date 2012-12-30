@@ -1,18 +1,15 @@
 %h1 Listing cars
 
-%table
+
+%table#cars
   %tr
     %th Brand
     %th Model
     %th Year
     %th Engine
     %th Price
-    %th Notes
     %th Image
     %th Owner
-    %th
-    %th
-    %th
 
   - @cars.each do |car|
     %tr
@@ -21,11 +18,9 @@
       %td= car.Year
       %td= car.Engine
       %td= car.Price
-      %td= car.Notes
       %td= car.Image
       %td= car.Owner
       %td= link_to 'Show', car
-      %td= link_to 'Edit', edit_car_path(car)
       %td= link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete
 
 %br

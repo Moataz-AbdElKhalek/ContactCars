@@ -50,3 +50,4 @@ group :test do
 end
 
 gem 'haml'
+gem 'haml-rails'
