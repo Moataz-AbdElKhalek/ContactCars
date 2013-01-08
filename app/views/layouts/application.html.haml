@@ -11,30 +11,33 @@
       %div#menu
         %ul
           %li
-            = link_to 'Home'
+            = link_to 'Home', '/home'
           %li
-            = link_to 'Cars'
+            = link_to 'Cars', cars_path()
           %li
-            = link_to 'About'
-            
+            = link_to 'About', '/about'
+          %li= link_to image_tag('twitter-banner.jpg'), '/auth/twitter'
+
+                        
     %div#wrapper
       %div#header-wrapper
         %div#header
-          %div#logo		
+          %div#logo
             %h1 Contact Cars
           %div{:style => "clear: both;"}
 
 	
       %div#page
         %div#page-bgtop
-          #main
-            - if flash[:notice]
-              #notice.message= flash[:notice]
-            - elsif flash[:warning]
-              #warning.message= flash[:warning]
+
 
           %div#page-bgbtm
             %div#content
+              #main
+                - if flash[:notice]
+                  #notice.message= flash[:notice]
+                - elsif flash[:warning]
+                  #warning.message= flash[:warning]
               %div.post
                 = yield
       

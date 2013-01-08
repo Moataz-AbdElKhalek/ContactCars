@@ -1,6 +1,9 @@
 Contactcars::Application.routes.draw do
   resources :cars
-
+  match 'about' => 'cars#about'
+  match 'home' => 'cars#home'
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
