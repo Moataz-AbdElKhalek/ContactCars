@@ -1,6 +1,12 @@
 class CarsController < ApplicationController
   # GET /cars
   # GET /cars.json
+  def about
+  end
+  def home
+  end
+
+  
   def index
     @cars = Car.all
 	if params['commit'] == 'Search'
