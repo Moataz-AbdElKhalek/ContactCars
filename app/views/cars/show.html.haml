@@ -20,7 +20,8 @@
   = @car.Notes
 %p
   %b Image:
-  = @car.Image
+  = image_tag(@car.Image,:size => '400x235')
+
 %p
   %b Owner:
   = @car.Owner
