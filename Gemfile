@@ -1,6 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
+gem 'execjs'
+gem 'libv8'
+gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -10,7 +13,7 @@ gem 'rails', '3.1.0'
 # for Heroku deployment
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug19', :require => 'ruby-debug'
+#  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'

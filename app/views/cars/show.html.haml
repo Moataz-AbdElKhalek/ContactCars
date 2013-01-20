@@ -25,6 +25,6 @@
   %b Owner:
   = @car.Owner
 
-= link_to 'Edit', edit_car_path(@car)
+= link_to 'Edit', edit_car_path(@car) if session[:user_id] and session[:user_id] == @car.user_id
 \|
 = link_to 'Back', cars_path

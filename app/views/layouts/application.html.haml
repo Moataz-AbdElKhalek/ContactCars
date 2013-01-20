@@ -16,6 +16,10 @@
             = link_to 'Cars', cars_path()
           %li
             = link_to 'About', '/about'
+          %li
+            = link_to 'Login', '/users/login' unless session[:user_id] 
+          %li
+            = link_to 'signout', '/users/signout' if session[:user_id]
           %li= link_to image_tag('twitter-banner.jpg'), '/auth/twitter'
 
                         
@@ -24,6 +28,7 @@
         %div#header
           %div#logo
             %h1 Contact Cars
+            %h2= User.find_by_id(session[:user_id])[:Name] if !session[:user_id].nil?
           %div{:style => "clear: both;"}
 
 	
@@ -68,5 +73,4 @@
           %br
           
       %div#footer
-        %p Copyright (c) 2012 ContactCars, All rights reserved to Yahia Kandeel & Moataz Abdelkhalek. 
-  
+        %p Copyright (c) 2012 ContactCars, All rights reserved to Yahia Kandeel & Moataz Abdelkhalek.

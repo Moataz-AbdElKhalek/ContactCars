@@ -1,4 +1,7 @@
 class CarsController < ApplicationController
+
+
+
   # GET /cars
   # GET /cars.json
   def about
@@ -6,7 +9,7 @@ class CarsController < ApplicationController
   def home
   end
 
-  
+ 
   def index
     @cars = Car.all
 	if params['commit'] == 'Search'
@@ -51,8 +54,10 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(params[:car])
-
+    params[:car][:Owner]  = User.find_by_id(session['user_id'])[:Name]
+    user = User.find_by_id(session['user_id'])
+    @car = user.cars.new(params[:car])
+	
     respond_to do |format|
       if @car.save
         format.html { redirect_to @car, notice: 'Car was successfully created.' }
