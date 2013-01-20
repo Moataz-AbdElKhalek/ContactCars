@@ -4,4 +4,5 @@ class Car < ActiveRecord::Base
 	validates :Year, :presence => true
 	validates :Engine, :presence => true
 	validates :Price, :presence => true
+	belongs_to :user
 end

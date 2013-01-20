@@ -1,0 +1,11 @@
+= form_tag users_verify_path , :method => :post do
+                    = label :name, :title, 'Name'
+                    = text_field_tag :Name
+                    %br
+                    = label :name, :title, 'Password'
+                    = password_field_tag :Password
+                    %br
+                    = submit_tag 'Login'
+%br
+%h5 If you Don't have account you can
+%h5= link_to 'Sign Up', '/users/new'

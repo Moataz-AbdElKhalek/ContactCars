@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @user.Name
+%p
+  %b Phone:
+  = @user.Phone
+%p
+  %b Address:
+  = @user.Address
+
+= link_to 'Edit', edit_user_path(@user) if session[:user_id] and session[:user_id] == @user.id
+\|
+= link_to 'Back', cars_path
