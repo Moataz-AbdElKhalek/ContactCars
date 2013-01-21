@@ -21,6 +21,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'ZenTest'
   gem 'simplecov'
+  gem 'minitest'
 end
 group :production do
   gem 'pg'
