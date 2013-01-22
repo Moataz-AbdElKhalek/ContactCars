@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/MoatazContactCars/app/controllers/application_controller.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -12,23 +12,23 @@
         null,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/helpers/application_helper.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/helpers/cars_helper.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/helpers/cars_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/helpers/sessions_helper.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/helpers/users_helper.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/controllers/cars_controller.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/controllers/cars_controller.rb": [
         1,
         null,
         null,
@@ -129,7 +129,7 @@
         null,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/models/car.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/models/car.rb": [
         1,
         1,
         1,
@@ -139,7 +139,7 @@
         1,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/controllers/users_controller.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/controllers/users_controller.rb": [
         1,
         null,
         null,
@@ -254,7 +254,7 @@
         null,
         null
       ],
-      "/home/ubuntu/MoatazContactCars/app/models/user.rb": [
+      "/home/ubuntu/MoatazContactCars-test/app/models/user.rb": [
         1,
         1,
         1,
@@ -263,6 +263,6 @@
         null
       ]
     },
-    "timestamp": 1358812112
+    "timestamp": 1358813486
   }
 }
